@@ -5,6 +5,7 @@ import Login from './Components/Auth/Login/Login'
 import Register from './Components/Auth/Register/Register'
 import Nav from './Components/Nav/Nav'
 import Dashboard from './Components/Dashboard/Dashboard'
+import PhotoUpload from './Components/Photoupload/Photoupload'
 
 class App extends Component {
 
@@ -99,11 +100,13 @@ class App extends Component {
   render() {
     return (
       <div>
+        
         <Nav doLogOutUser={this.doLogoutUser} />
         <Switch>
           <Route exact path="/register" component={() => <Register />} />
           <Route exact path="/login" component={(...props) => <Login doLoginUser={this.doLoginUser} />} />
           <Route exact path="/dashboard" component={() => <Dashboard loggedUser={this.state.loggedUser} doDeleteUser={this.doDeleteUser} />} />
+          <Route exact path="/upload" component={() => <PhotoUpload />} />
         </Switch>
       </div>
     );
