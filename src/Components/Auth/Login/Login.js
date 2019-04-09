@@ -23,8 +23,8 @@ class Login extends Component {
         return(
             <div>
                 <form onSubmit={this.doHandleSubmit}>
-                <input type='email' name='email' value={this.state.email} onChange={this.doHandleInput}/>
-                <input type='password' name='password' value={this.state.password} onChange={this.doHandleInput}/>
+                <input type='email' placeholder='email' name='email' value={this.state.email} onChange={this.doHandleInput}/>
+                <input type='password' placeholder='password' name='password' value={this.state.password} onChange={this.doHandleInput}/>
                 <button type='submit'> Login </button>
                 </form>
             </div>
